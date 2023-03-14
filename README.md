@@ -5,6 +5,7 @@ My attempt at creating a perlin noise map using "apex" (that's what im calling t
 
 ## Features
 - Can generate user defined map size
+- Generate random noise between apexes
 
 ## In dev
 - Generating the random noise between apexes 
