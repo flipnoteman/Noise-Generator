@@ -1,5 +1,5 @@
 # Noise Generator
-My attempt at creating a noise map using "apex" (that's what im calling them) points and relative distances.
+My attempt at creating noise map generators using "apex" (that's what im calling them) points and relative distances (among other devices).
 
 ### Features
 - Can generate user defined map size
