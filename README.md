@@ -37,7 +37,7 @@ fn main() {
     map.voronoi_smooth(0.1, 0.6);
     
     /* Scale every value by a given scalar, 
-    this should ensure no value goes above the given shadar value */
+    this should ensure no value goes above the given scalar value */
     map.scale(255f32);
     
     // Exports your map to a png, see examples of this below
