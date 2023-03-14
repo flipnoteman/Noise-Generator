@@ -10,3 +10,4 @@ My attempt at creating a perlin noise map using "apex" (that's what im calling t
 ## In dev
 - Generating different "terrain" types
 - Multithread
+- Seeding
