@@ -9,8 +9,9 @@ mod point;
 use crate::map::*;
 
 
-const MAP_WIDTH: i32 = 10;
-const MAP_HEIGHT: i32 = 15;
+const MAP_WIDTH: i32 = 1080;
+const MAP_HEIGHT: i32 = 720;
+const SEED_POINTS: usize = 250;
 
 
 fn main() {
@@ -18,10 +19,18 @@ fn main() {
     //let mut map = map!(MAP_WIDTH, MAP_HEIGHT);
     let mut map = map!(MAP_WIDTH, MAP_HEIGHT);
 
-    map.seed_rand(10);
-    map.scale(100f32);
+    println!("Generating and seeding Map: {}x{}...", MAP_WIDTH, MAP_HEIGHT);
+
+    map.seed_rand(SEED_POINTS);
+
+    println!("Smoothing the map out with {} seed points...", SEED_POINTS);
+    map.smooth(0.1, 0.6);
+
+    println!("Smoothing Finished.");
+    map.scale(255f32);
+
+    map.export_png();
 
     println!("{}", map);
 
-    map.smooth();
 }

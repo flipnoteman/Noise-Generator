@@ -2,9 +2,16 @@
 use std::fmt;
 use std::fmt::Formatter;
 
+#[derive(Copy)]
 pub struct Point {
     pub x: usize,
     pub y: usize,
+}
+
+impl PartialEq for Point {
+    fn eq(&self, other: &Self) -> bool {
+        self.x == other.x && self.y == other.y
+    }
 }
 
 impl Clone for Point {
