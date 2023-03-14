@@ -14,10 +14,14 @@ const MAP_HEIGHT: i32 = 15;
 
 
 fn main() {
-    let mut map = Map::new(MAP_WIDTH, MAP_HEIGHT);
+    //let mut map = Map::new(MAP_WIDTH, MAP_HEIGHT);
+    //let mut map = map!(MAP_WIDTH, MAP_HEIGHT);
+    let mut map = map!(MAP_WIDTH, MAP_HEIGHT);
 
     map.seed_rand(10);
     map.scale(100f32);
 
     println!("{}", map);
+
+    map.smooth();
 }
